@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .container {
+        box-shadow: 2px 2px 6px 8px rgba(216, 216, 216, 0.541);
+        height: 320px;
+        width: 650px;
+        margin: 100px auto;
+        border-radius: 7px;
+      }
+      .confirmIcon {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        margin: auto;
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
+      .confirmIcon > img {
+        width: 100%;
+        height: 100%;
+        /* padding: 1px; */
+      }
+      .confirmText {
+        /* border: 1px solid rgb(3, 3, 3); */
+        margin: auto;
+        height: 50px;
+        width: 200px;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(2, 117, 117);
+        text-align: center;
+      }
+      .confirmText > p {
+        font-size: 16px;
+        color: rgb(78, 74, 74);
+      }
+      .confirmText > p:nth-child(2) {
+        font-size: 12px;
+        color: rgb(104, 99, 99);
+      }
+      .shoppingButton {
+        width: 300px;
+        height: 35px;
+
+        margin-top: 120px;
+
+        background-color: white;
+        color: black;
+        /* border: 1px solid grey; */
+        padding: 4px 16px;
+        justify-content: center;
+        margin-left: 180px;
+        display: flex;
+        padding-right: 5px;
+      }
+      .shoppingButton > button {
+        width: fit-content;
+        margin-right: 35px;
+        background-color: #f4d177;
+        /* padding-left: 10px;  */
+        border: none;
+        border-radius: 5px;
+        color: #f11a22;
+        font-size: 12px;
+      }
+      .shoppingButton > button:nth-child(2) {
+        background-color: #84c225;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="confirmIcon">
+        <img
+          src="https://cdn-icons.flaticon.com/png/512/5289/premium/5289675.png?token=exp=1645785572~hmac=6b1446c8904b2e7fbb9045c1adfe9177"
+        />
+      </div>
+      <div class="confirmText">
+        Order Confirmed
+        <p>“Thank you for your order”<br /></p>
+        <p>You will receive an order confirmation email/SMS shortly.</p>
+      </div>
+      <div class="shoppingButton">
+        <button type="button">Continue Shopping</button>
+        <button type="button">View Order</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document
+    .querySelector(".shoppingButton")
+    .addEventListener("click", function () {
+      console.log("here");
+      window.location.href = "index.html";
+    });
+</script>
