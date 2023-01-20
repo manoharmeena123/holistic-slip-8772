@@ -152,7 +152,7 @@
   
                 <!-- <label for="">Password</label> -->
                 <input id="password" type="password"  placeholder="PASSWORD" /><br>
-        ​     ​ 
+        ​    
                 <button id="two" type="submit">Continue</button>
                <p id="signupLink">If already have account? <a href="signup.html">SignUp</a>
                    
@@ -161,7 +161,7 @@
 
         </div>
         
-    <!-- </div> -->
+    <!-- </div> --> ​ 
   </body>
 </html>
 <script>
@@ -194,7 +194,7 @@ async function formFunction(event){
             console.log(res)
             alert(res.msg)
             localStorage.setItem("psctoken",res.token)
-            window.location.href= "./homenote.html"
+            window.location.href= "./index.html"
         })
         .catch((err) => console.log(err))
         

@@ -94,7 +94,7 @@
               <!-- search tab -->
               <div class="content">
                 <div id="input">
-                  <input type="search" id="search" placeholder="Search for Products...">
+                  <input type="search" oninput="search()" id="search" placeholder="Search for Products...">
                   <button class="find">
                     <i class="fa fa-search" style="font-size: 16px"></i>
                   </button>
@@ -981,6 +981,7 @@
 
 <script type="module">
   import {navbar,footer} from "./components/index.js"
+
   // console.log(footer)
   let nav_div = document.getElementById("navbar")
   nav_div.innerHTML = navbar();
@@ -1023,6 +1024,18 @@
   // document.getElementById("burger").addEventListener("click", function(){
   //   document.querySelector(".material-icons").style.width = "250px";
   // })
+
+  
+// function search(){
+//     let q =document.querySelector("input").value
+//     console.log(q)
+//     let newData = bag.filter(function(elem){
+//         return elem.title.toLowerCase().includes(q.toLowerCase())
+//     });
+//     // console.log(newData);
+//     // display(Fruits_and_Vegitables)
+//     // displayTable(newData)
+// }
 
   /* Set the width of the sidebar to 0 (hide it) */
   // function closeNav() {
@@ -1097,5 +1110,7 @@ function moveBackward() {
 leftBtn.addEventListener('click', (e) => {
        moveBackward()
 })
+
+document.getElementById
 </script>
 

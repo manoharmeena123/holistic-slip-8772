@@ -60,10 +60,10 @@ userRouter.post("/login",async(req,res)=>{
 
 //about====================================================>
 
-// userRouter.get("/get",async(req,res)=>{
-//     const user =await UserModel.find()
-//     res.json(user)
-// })
+userRouter.get("/get",async(req,res)=>{
+    const user =await UserModel.find()
+    res.json(user)
+})
 
 
 

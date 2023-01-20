@@ -332,7 +332,7 @@
       // Category is already been stored.
 
       var delv = document.createElement("p");
-      delv.textContent = "Delivery: Today 6:00PM - 9:00PM";
+      delv.textContent = "Delivery 6:00PM - 9:00PM";
       delv.setAttribute("class", "delv");
 
       var qty = document.createElement("button");
@@ -349,7 +349,7 @@
       add.textContent = "ADD";
       add.addEventListener("click", function () {
         console.log(elem);
-       
+        alert("item Added succesfully")
         add.textContent = "ADDED";
         cart.push(elem);
         document.querySelector('#cartLen').innerHTML=cart.length

@@ -274,6 +274,18 @@ import {navbar,footer} from "./components/index.js"
   var cart = JSON.parse(localStorage.getItem("cartValue")) || [];
   console.log(product);
 
+
+  ///===========================================================================================================>
+//   function search(){
+//     let q =document.querySelector("input").value
+//     console.log(q)
+//     let newData =  Fruits_and_Vegitables.filter(function(elem){
+//         return elem.title.toLowerCase().includes(q.toLowerCase())
+//     });
+//     // console.log(newData);
+//     display(Fruits_and_Vegitables)
+//     // displayTable(newData)
+// }
  
 
   var p = document.querySelector(".products");
@@ -309,9 +321,6 @@ import {navbar,footer} from "./components/index.js"
       var content = document.createElement("div");
       content.setAttribute("class", "proDesc");
 
-      // var brand = document.createElement("p");
-      // brand.textContent = elem.;
-      // brand.setAttribute("class", "brand");
       var name = document.createElement("h4");
       name.textContent = elem.name;
       name.setAttribute("class", "name");
@@ -324,17 +333,13 @@ import {navbar,footer} from "./components/index.js"
       mrp1.textContent = "MRP " + +elem.Price;
       mrp1.setAttribute("class", "mrp");
 
-      // var mrp2 = document.createElement("h5");
-      // mrp2.textContent = "MRP " + +elem.Stricked;
-      // mrp2.setAttribute("class", "mrp");
-
       var dis = document.createElement("h4");
       dis.textContent = "Price: " + elem.Offer;
       dis.setAttribute("class", "dis");
       // Category is already been stored.
 
       var delv = document.createElement("p");
-      delv.textContent = "Delivery: Today 6:00PM - 9:00PM";
+      delv.textContent = "Delivery Today 6:00PM-9:00PM";
       delv.setAttribute("class", "delv");
 
       var qty = document.createElement("button");
@@ -351,6 +356,7 @@ import {navbar,footer} from "./components/index.js"
       add.textContent = "ADD";
       add.addEventListener("click", function () {
         console.log(elem);
+        alert("item Added succesfully")
         add.textContent = "ADDED";
         cart.push(elem);
         document.querySelector('#cartLen').innerHTML=cart.length
@@ -382,7 +388,7 @@ import {navbar,footer} from "./components/index.js"
   }
   document.querySelector(".card").addEventListener("click", function () {
     console.log("cart");
-    window.location.href = "http://127.0.0.1:5501/BIGBASKET-U3-P-main/cart.html";
+    window.location.href = "cart.html";
   });
   //Navbar script
   // var myIndex = 0;
@@ -394,6 +400,8 @@ import {navbar,footer} from "./components/index.js"
   //   for (i = 0; i < x.length; i++) {
   //     x[i].style.display = "none";
   //   }
+
+  
   //   myIndex++;
   //   if (myIndex > x.length) {
   //     myIndex = 1;
@@ -424,6 +432,7 @@ import {navbar,footer} from "./components/index.js"
       }
     }
   };
+  // export{display(Fruits_and_Vegitables)}
 </script>
  <script type="module"> 
     import {navbar,footer} from "./components/index.js"

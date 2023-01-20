@@ -59,20 +59,20 @@ postRouter.get("/getone/:todoID", async (req, res) => {
   
 })
  
-// //Filtered=============================================>
-// postRouter.get("/filter",async(req,res)=>{
-//     const status = req.query.status
+//Filtered=============================================>
+postRouter.get("/search/:find",async(req,res)=>{
+    const find = req.params.find
 
-//     try {
-//           const data = await PostModel.find().sort({status:-1})
-//     res.send(data)
+    try {
+          const data = await PostModel.find({name:{$regex:find,$options:'i'}})
+    res.send(data)
         
-//     } catch (error) {
-//         res.json(error)
-//     }
+    } catch (error) {
+        res.json(error)
+    }
   
-// })
-
+})
+// const product = await ProductModel.find({ title: { $regex: searchTerm, $options: "i" } });
 
 
 //POST================================================================================================================================================>
@@ -80,8 +80,8 @@ postRouter.get("/getone/:todoID", async (req, res) => {
 postRouter.post("/create",async(req,res)=>{
     const payload = req.body
     try {
-        const data = new PostModel(payload)
-    await data.save()
+        const data = await PostModel.insertMany(payload)
+   
     res.send("Data Posted Successfully")
     } catch (error) {
         console.log(Error)

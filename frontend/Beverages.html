@@ -332,7 +332,7 @@ import {navbar,footer} from "./components/index.js"
       // Category is already been stored.
 
       var delv = document.createElement("p");
-      delv.textContent = "Delivery: Today 6:00PM - 9:00PM";
+      delv.textContent = "Delivery 6:00PM - 9:00PM";
       delv.setAttribute("class", "delv");
 
       var qty = document.createElement("button");
@@ -350,6 +350,7 @@ import {navbar,footer} from "./components/index.js"
       add.addEventListener("click", function () {
         console.log(elem);
         addToCart(elem);
+        alert("item Added succesfully")
         add.textContent = "ADDED";
       });
       add.setAttribute("class", "add");
@@ -377,7 +378,7 @@ import {navbar,footer} from "./components/index.js"
   }
   document.querySelector(".card").addEventListener("click", function () {
     console.log("cart");
-    window.location.href = "http://127.0.0.1:5501/BIGBASKET-U3-P-main/cart.html";
+    window.location.href = "cart.html";
   });
   //Navbar script
   // var myIndex = 0;
