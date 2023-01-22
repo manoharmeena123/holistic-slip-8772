@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       #head{
+            height: 50px;
+            background-color: dimgrey;
+            color: white;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+        #contain{
+            height: 260px;
+            width: 80%;
+            /* border: 1px solid black; */
+            display: flex;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            margin:40px auto;
+        }
+        #contain>#img{
+            width: 30%;
+            /* border: 1px solid black; */
+            text-align: center;
+            padding-top: 5px;
+        }
+        #img>img{
+            width: 60%;
+        }
+        h3{
+            color:dimgrey ;
+        }
+        #detail{
+            text-align: center;
+            width: 70%;
+            margin-top: 30px;
+        }
+        #detail>p{
+            font-size: larger;
+            color: cadetblue;
+        }
+
+        /* //////////////////// */
+        table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #8caacf;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:rgb(132,194,37);
+  color: white;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div id="head">
+        <h1>About the project</h1>
+    </div>
+    <div id="contain">
+
+        <div id="img">
+            <img src="C:\Users\BIIT\OneDrive\Desktop\manohar_meena_fw21_0164\unit-4\sprint-4\day-2\FullStackCrud\frontend\b12b87ca-dd2c-4b27-837e-11e55fbd5745.jpg" alt="">
+            <h3 color="blue">Manohar Meena</h3>
+            <h3>Backend Developer</h3>
+        </div>
+        <div id="detail">
+            <p>"Hey, I am Manohar and i made this Project using Bootstrap,HTML.CSS,Javascript.This is my first  full Stack Project in which i also created Backend and frontend together.In this Project i used Authentication Middleware without it you can"t do any crud operation and you have to Login/Signup first  "</p>
+        </div>
+    </div>
+  <br><br>
+  <hr>  
+ <a href="./sold.html">Sold Product</a>
+  <h1>Here All the Users!</h1>
+  <form id="formnote"> 
+  
+    <input type="submit" value="click" id="btn">
+   </form> 
+
+  <table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Mobile</th>
+          
+        </tr>
+    </thead>
+    <tbody id="table">
+        
+    </tbody>
+   </table>
+<br>
+   <hr>
+
+   <!-- <form action="">
+    <input type="submit" value="click" id="product">
+   </form> -->
+   
+</body>
+</html>
+<script>
+    let token = localStorage.getItem("psctoken")
+        const create_btn = document.querySelector("#formnote");
+        create_btn.addEventListener("submit",CreateNoteFunction);
+
+// Make API request to server for deleteing the new user.
+async function CreateNoteFunction(event) {
+  if(token){
+  try {
+    event.preventDefault();
+   
+    
+    let delete_request = await fetch(`http://localhost:3500/user/get`,{
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+       "Authorization": token
+        
+      }
+   
+    }).then(res => res.json())
+    .then(res => DisplayData(res))
+    .catch(err =>console.log(err))
+        
+    } catch (error) {
+		console.log(error);
+        alert("Error in Getting Data. Please try again later.");
+    }
+
+}else{
+  alert("Please Login First")
+}
+}
+function DisplayData(data){
+    document.querySelector("tbody").innerHTML = ""
+    data.forEach(ele => {
+        let div =  document.createElement("tr")
+        let id = document.createElement("td")
+ id.innerText = ele._id
+ let name = document.createElement("td")
+name.innerText = ele.email
+ let email = document.createElement("td")
+email.innerText = ele.password
+let pass= document.createElement("td")
+pass.innerText = ele.mobile
+// let age = document.createElement("td")
+// age.innerText = ele.age
+ div.append(id,name,email,pass)
+ document.querySelector("#table").append(div)
+
+    })
+ 
+}
+
+
+</script>
+
+
+
+

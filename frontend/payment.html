@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make your payment</title>
+  </head>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Helvetica Neue, Arial, sans-serif;
+        background-color: white;
+        color: black;
+    }
+    .cont {
+      width: 20%;
+      margin: 50px auto;
+      border: 1px solid black;
+      padding: 3%;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 3px 10px 0 rgba(0, 0, 0, 0.19);
+      background-color: white;
+      border-radius: 10px;
+      text-align: center; 
+      align-items: center; 
+    }
+    input {
+      display: block;
+      width:90%;
+      /* margin-top: 5px;
+      margin-bottom: 10px; */
+      margin:auto;
+      background-color: white;
+      color: black;
+      padding-top: 10px;
+    }
+    .pdc {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-basis: 22%;
+      gap: 4%;
+    }
+    img {
+      width: 80%;
+      height: 50px;
+      object-fit: contain;
+    }
+    .sbt {
+      width: 100%;
+      height: 30px;
+      padding: 5px 10px;
+      font-size: 16px;
+      background-color: #84c225;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+    .sbt:hover {
+      background-color: navy;
+    }
+    #head {
+      /* border: 1px solid black; */
+      text-align: center;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+  <body>
+    <div class="cont">
+      <div id="head">
+        <img src="images/bbLogo.png" alt="" />
+        <h4>Make a payment and get your product by today evening</h4>
+      </div>
+      <form onsubmit="makepayment(event)">
+        <label for="card">Enter your Card Number</label>
+        <input type="number" id="card" placeholder="xxxx xxxx xxxx" required />
+
+        <label for="date">Expiry Date</label>
+        <input type="date" id="date" required />
+
+        <label for="pin">Enter CVV Number</label>
+        <input type="password" id="pin" placeholder="xxx" required />
+
+        <label for="cardH">Card Holder:</label>
+        <input type="text" id="cardH" placeholder="Name" required />
+
+        <input type="submit" value="Proceed" class="sbt" />
+      </form>
+      <div class="pdc">
+        <div class="logo-c">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/cc/upi.png"
+            alt="paymentDoor"
+          />
+        </div>
+        <div class="logo-c">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/cc/visa-2.png"
+          />
+        </div>
+        <div class="logo-c">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/cc/netbanking.png"
+          />
+        </div>
+        <div class="logo-c">
+          <img
+            src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/cc/mastercard-2.png"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  function random() {
+    var otp = Math.round(1000 + Math.random() * 9999);
+    return otp;
+  }
+
+  function makepayment(e) {
+    e.preventDefault();
+
+    var cardNumber = document.getElementById("card").value;
+    var date = document.getElementById("date").value;
+    var cvv = document.getElementById("pin").value;
+    var name = document.getElementById("cardH").value;
+
+    // if (cardNumber < 100000000000 || cardNumber > 999999999999) {
+    //   alert("Invalid Card Number");
+    // }
+    if (pin < 999 || pin > 100) {
+      alert("Invalid CVV ");
+    } else {
+      let otimep = random();
+      alert(otimep);
+      let enter = prompt("Enter OTP");
+      //console.log(enter);
+      if (enter != null && Number(enter) === otimep) {
+        setTimeout(function () {
+          // alert("Order Placed Successfully!!!");
+          window.location.assign("success.html");
+        }, 2000);
+      } else {
+        alert("Invalid OTP");
+      }
+    }
+  }
+</script>

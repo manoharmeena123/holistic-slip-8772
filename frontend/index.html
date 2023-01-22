@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIG BASKET</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Navbar Props -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Lato Fonts impoting -->
+    <!-- Roboto Slab Importing -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <!--slider link-->
+    <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+  <body id="overP">
+    <div class="container">
+      <!-- NAVBAR STARTS here -->
+      <!-- <div id="navbar" class=""></div> -->
+      <div id="navbar" class="">
+        <div>
+            <div id="nav">
+              <!-- Side panel -->
+              <div id="mySidepanel" class="sidepanel">
+                <a href="#">Home
+                  <i href="javascript:void(0)" class="fa fa-close" style="background-color: rgb(255, 255, 255)" onclick="closeNav()" id="close"></i></a>
+                <hr>
+                <a href="#">SHOP BY CATEGORY</a>
+                <hr>
+                <a href="#">OFFERS</a>
+                <hr>
+                <a href="#">MORE SHOPs</a>
+                <hr>
+              </div>
+              <!-- id burger and person for medium and small screen -->
+              <!-- these two not visible on large screen -->
+              <div id="burger">
+                <i class="material-icons" style="font-size: 40px" onclick="openNav()">menu</i>
+              </div>
+              <div id="person">
+                <i class="material-icons personbtn" style="font-size: 40px" onclick="openPerson()">person</i>
+                <div class="person-content" id="personDropdown">
+                  <button class="Btn">
+                    <a href="login.html">Login</a>
+                  </button>
+                  <button class="Btn">
+                    <a href="signup.html">Signup</a>
+                  </button>
+                </div>
+              </div>
+    
+              <div id="logo">
+                <img src="images/bbLogo.png" alt="">
+              </div>
+    
+              <!-- top bar -->
+              <div class="header">
+                <ul>
+                  <li>
+                    <i class="material-icons" style="font-size: 16px">local_phone</i><span> 1860 123 1000 </span>
+                  </li>
+                  <li>
+                    <i class="material-icons" style="font-size: 16px">my_location</i><a href="https://goo.gl/maps/uMpBBq53jdrduzT56">
+                      452001,Indore
+                    </a>
+                  </li>
+                  <li>
+                    <i class="material-icons" style="font-size: 16px">person</i><a href="signup.html"> Login/Signup </a>
+                  </li>
+                </ul>
+              </div>
+    
+              <!-- logo -->
+              <div class="menu">
+                <img src="images/bbLogo.png" alt="bblogo">
+              </div>
+    
+              <!-- search tab -->
+              <div class="content">
+                <div id="input">
+                  <input type="search" oninput="search()" id="search" placeholder="Search for Products...">
+                  <button class="find">
+                    <i class="fa fa-search" style="font-size: 16px"></i>
+                  </button>
+                </div>
+              </div>
+    
+              <!-- basket/cart tab -->
+              <div class="card">
+                <i class="fa fa-shopping-cart" style="font-size: 40px; color: red"></i>
+                <div>
+                  <p>My Basket</p>
+                  <p><span id="cartLen">0</span> items</p>
+                </div>
+              </div>  
+    
+              <!-- this 2 only visible on  medium and small screen-->
+              <div id="location">
+                <i class="material-icons" style="font-size: 40px">my_location</i>
+              </div>
+              <div id="cart">
+                <i class="fa fa-shopping-cart" style="font-size: 40px" onclick="cart()">
+                </i>
+              </div>
+            </div>
+            <!-- shop by category on hover dropdown -->
+            <div class="navbar">
+              <div class="dropdown">
+                <button class="dropbtn">
+                  Shop By Category
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="Fruits_and_Vegitables.html">Fruits and Vegetables</a>
+                  <a href="bakery.html">Bakery,cakes &amp; Dairy</a>
+                  <a href="Beverages.html">Beverage</a>
+                  <a href="#">Beauty &amp; Hygiene</a>
+                  <a href="#">Baby Care</a>
+                  <a href="#">snacks</a>
+                </div>
+              </div>
+              <button class="offers">
+                <i class="fa fas fa-tags"></i>
+                Offers
+              </button>
+            </div>
+          </div><br>
+    </div>
+      <!-- NAVBAR ENDS here -->
+      <!-- Carousel Starts here -->
+      <div>
+        <!-- images slide show -->
+        <div id="images">
+          <img
+            class="one"
+            src="https://www.bigbasket.com/media/uploads/banner_images/hp_fom_m_bbpl-staples_460_131221_Bangalore.jpg"
+            alt=""
+          />
+          <img
+            class="two"
+            src="https://www.bigbasket.com/media/uploads/banner_images/hp_kgp_m_H_Knowornever_460_251121.jpg"
+            alt=""
+          />
+          <img
+            class="three"
+            src="https://www.bigbasket.com/media/uploads/banner_images/hp_b_h_m_Men_sDen_460_251121.jpg"
+            alt=""
+          />
+          <img
+            class="four"
+            src="https://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_bbroyal_460_251121.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- Carousal ends here -->
+      <!-- Top Categories -->
+      <div id="topCat">
+        <a href="http://127.0.0.1:5501/BIGBASKET-U3-P-main/cart.html">
+          <img src="images/eggmeat.png" alt="eggmeat" />
+        </a>
+        <a href="http://127.0.0.1:5501/BIGBASKET-U3-P-main/cart.html">
+          <img src="images/bbCat.png" alt="eggmeat" />
+        </a>
+        <a href="http://127.0.0.1:5501/BIGBASKET-U3-P-main/cart.html">
+          <img src="images/preCat.png" alt="eggmeat" />
+        </a>
+        <a href="http://127.0.0.1:5501/BIGBASKET-U3-P-main/cart.html">
+          <img src="images/FAQsCat.png" alt="eggmeat" />
+        </a>
+        <a href="http://127.0.0.1:5501/BIGBASKET-U3-P-main/cart.html">
+          <img src="images/comboCat.png" alt="eggmeat" />
+        </a>
+        <a href="http://127.0.0.1:5501/BIGBASKET-U3-P-main/cart.html">
+          <img src="images/dowCat.png" alt="eggmeat" />
+        </a>
+      </div>
+      <!-- Top Cat Ends here -->
+      <!-- my smart basket starts -->
+      <!-- <div id="mySmartBasket">
+        <div id="myA">
+          <p>My Smart Basket</p>
+        </div>
+        <div id="myB">
+          <button>View all</button>
+        </div>
+        <div id="myC">
+          <hr />
+        </div>
+      </div>
+      <div><h3>Some products will see here!</h3></div> -->
+      <!-- my smart basket ends -->
+      <!-- Banner 1 -->
+      <!-- <div id="banner1">
+        <a href="http://127.0.0.1:5501/BIGBASKET-U3-P-main/cart.html">
+          <img src="images/banner1.jpeg" alt="" />
+        </a>
+      </div> -->
+
+     
+      <h1 class="smart">My Smart Basket</h1>
+       <hr>
+      <div class="bottom_carousel_right_section">
+        <span class="bottom_carousel_prev_button"><span
+                      class=" material-symbols-outlined">arrow_back_ios</span></span>
+        <div class="bottom_carousel_display_container">
+               <div class="bottom_carousel_cards_track">
+                      <div class="bottom_carousel_card">
+                             <!-- image -->
+                             <div>
+                                    <img src="https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg"
+                                           alt="">
+                             </div>
+                             <!-- title -->
+                             <span>
+                                   Onion(Loose)</span>
+                             <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                <select name="" id="">
+                                  <option value="">2kg - Rs 120</option>
+                                  <option value="">5kg - Rs 250</option>
+                                  <option value="">10kg - Rs 700</option>
+                                </select>
+                             <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+                             <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                              <div class="col-sm-5 col-xs-4 pad-0">
+                                <div class="input-group" qa="qty">
+                                  <span class="input-group-addon">Qty</span> 
+                                  <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                                </div>
+                                <div class="col-sm-5 col-xs-5 pad-0">
+                                  <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                                  </button></div><!-- ngIf: false --></div>
+                             <!-- <span>$490.00</span> -->
+                      </div>
+                      <div class="bottom_carousel_card">
+                             <!-- image -->
+                             <div>
+                                    <img src="https://www.bigbasket.com/media/uploads/p/s/40072320_2-fresho-farm-eggs-table-tray-medium-antibiotic-residue-free.jpg"
+                                           alt="">
+                             </div>
+                             <!-- title -->
+                             <span>
+                                    EGG-white(Loose)</span>
+                             <span><img src="./resources/5-stars.png" alt="">(100+)</span>
+                             <select name="" id="">
+                              <option value="">2 Packet - Rs 120</option>
+                              <option value="">5 Packet- Rs 250</option>
+                              <option value="">10 Packet - Rs 700</option>
+                            </select>
+                         <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+                         <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                          <div class="col-sm-5 col-xs-4 pad-0">
+                            <div class="input-group" qa="qty">
+                              <span class="input-group-addon">Qty</span> 
+                              <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                            </div>
+                            <div class="col-sm-5 col-xs-5 pad-0">
+                              <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                              </button></div><!-- ngIf: false --></div>
+                             <!-- <span>$590.00</span> -->
+                      </div>
+                      <div class="bottom_carousel_card">
+                             <!-- image -->
+                             <div>
+                                    <img src="https://www.bigbasket.com/media/uploads/p/s/10000071_14-fresho-carrot-orange.jpg"
+                                           alt="">
+                             </div>
+                             <!-- title -->
+                             <span>
+                              Carrot-Orange(Loose)</span>
+                             <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                             <select name="" id="">
+                              <option value="">2kg - Rs 120</option>
+                              <option value="">5kg - Rs 250</option>
+                              <option value="">10kg - Rs 700</option>
+                            </select>
+                         <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+                         <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                          <div class="col-sm-5 col-xs-4 pad-0">
+                            <div class="input-group" qa="qty">
+                              <span class="input-group-addon">Qty</span> 
+                              <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                            </div>
+                            <div class="col-sm-5 col-xs-5 pad-0">
+                              <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                              </button></div><!-- ngIf: false --></div>
+                             <!-- <span>$240.99</span> -->
+                      </div>
+                      <div class="bottom_carousel_card">
+                             <!-- image -->
+                             <div>
+                                    <img src="https://www.bigbasket.com/media/uploads/p/s/10000404_18-bb-royal-rice-raw-sona-masoori-12-17-months-old.jpg"
+                                           alt="">
+                             </div>
+                             <!-- title -->
+                             <span>
+                                    Rice-vasmati(Loose)</span>
+                             <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                             <select name="" id="">
+                              <option value="">2kg - Rs 120</option>
+                              <option value="">5kg - Rs 250</option>
+                              <option value="">10kg - Rs 700</option>
+                            </select>
+                         <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+                         <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                          <div class="col-sm-5 col-xs-4 pad-0">
+                            <div class="input-group" qa="qty">
+                              <span class="input-group-addon">Qty</span> 
+                              <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                            </div>
+                            <div class="col-sm-5 col-xs-5 pad-0">
+                              <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                              </button></div><!-- ngIf: false --></div>
+                             <!-- <span>$190.00</span> -->
+                      </div>
+                      <div class="bottom_carousel_card">
+                             <!-- image -->
+                             <div>
+                                    <img src="https://www.bigbasket.com/media/uploads/p/s/10000201_15-fresho-tomato-hybrid.jpg"
+                                           alt="">
+                             </div>
+                             <!-- title -->
+                             <span>
+                                    Tomato(red)</span>
+                             <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                             <select name="" id="">
+                              <option value="">2kg - Rs 120</option>
+                              <option value="">5kg - Rs 250</option>
+                              <option value="">10kg - Rs 700</option>
+                            </select>
+                         <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+                         <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                          <div class="col-sm-5 col-xs-4 pad-0">
+                            <div class="input-group" qa="qty">
+                              <span class="input-group-addon">Qty</span> 
+                              <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                            </div>
+                            <div class="col-sm-5 col-xs-5 pad-0">
+                              <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                              </button></div><!-- ngIf: false --></div>
+                             <!-- <span>$490.00</span> -->
+                      </div>
+                      <div class="bottom_carousel_card">
+                             <!-- image -->
+                             <div>
+                                    <img src="https://www.bigbasket.com/media/uploads/p/s/40191534_1-borges-extra-virgin-olive-oil.jpg"
+                                           alt="">
+                             </div>
+                             <!-- title -->
+                             <span>
+                                    Quality Chain QV729 15lb Truck and SUV Cable Tire Snow...</span>
+                             <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                             <select name="" id="">
+                              <option value="">2kg - Rs 120</option>
+                              <option value="">5kg - Rs 250</option>
+                              <option value="">10kg - Rs 700</option>
+                            </select>
+                         <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+                         <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                          <div class="col-sm-5 col-xs-4 pad-0">
+                            <div class="input-group" qa="qty">
+                              <span class="input-group-addon">Qty</span> 
+                              <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                            </div>
+                            <div class="col-sm-5 col-xs-5 pad-0">
+                              <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                              </button></div><!-- ngIf: false --></div>
+                             <!-- <span>$190.00</span> -->
+                      </div>
+                      <div class="bottom_carousel_card">
+                             <!-- image -->
+                             <div>
+                                    <img src="https://www.bigbasket.com/media/uploads/p/s/40192104_9-fresho-frozen-green-peas.jpg"
+                                           alt="">
+                             </div>
+                             <!-- title -->
+                             <span>
+                                    NOCO Genius 1000 Amp Lithium Portable Jump Starter</span>
+                             <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                             <select name="" id="">
+                              <option value="">2kg - Rs 120</option>
+                              <option value="">5kg - Rs 250</option>
+                              <option value="">10kg - Rs 700</option>
+                            </select>
+                         <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+                         <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                          <div class="col-sm-5 col-xs-4 pad-0">
+                            <div class="input-group" qa="qty">
+                              <span class="input-group-addon">Qty</span> 
+                              <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                            </div>
+                            <div class="col-sm-5 col-xs-5 pad-0">
+                              <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                              </button></div><!-- ngIf: false --></div>
+                             <!-- <span>$190.00</span> -->
+                      </div>
+                      <div class="bottom_carousel_card">
+                             <!-- image -->
+                             <div>
+                                    <img src="https://www.bigbasket.com/media/uploads/p/s/20005940_11-bb-royal-sona-masoori-rice-raw-rice-super-premium-12-months-old.jpg"
+                                           alt="">
+                             </div>
+                             <!-- title -->
+                             <span>
+                                    Permatex Ultra Black RTV Silicone Maximum Oil...</span>
+                             <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                             <select name="" id="">
+                              <option value="">2kg - Rs 120</option>
+                              <option value="">5kg - Rs 250</option>
+                              <option value="">10kg - Rs 700</option>
+                            </select>
+                         <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+                         <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                          <div class="col-sm-5 col-xs-4 pad-0">
+                            <div class="input-group" qa="qty">
+                              <span class="input-group-addon">Qty</span> 
+                              <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                            </div>
+                            <div class="col-sm-5 col-xs-5 pad-0">
+                              <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                              </button></div><!-- ngIf: false --></div>
+                             <!-- <span>$490.00</span> -->
+                      </div>
+                      <div class="bottom_carousel_card">
+                        <!-- image -->
+                        <div>
+                               <img src="https://www.bigbasket.com/media/uploads/p/s/40129678_8-pampers-diaper-pants-extra-large.jpg"
+                                      alt="">
+                        </div>
+                        <!-- title -->
+                        <span>
+                               Permatex Ultra Black RTV Silicone Maximum Oil...</span>
+                        <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                        <select name="" id="">
+                          <option value="">2kg - Rs 120</option>
+                          <option value="">5kg - Rs 250</option>
+                          <option value="">10kg - Rs 700</option>
+                        </select>
+                     <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+                     <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                      <div class="col-sm-5 col-xs-4 pad-0">
+                        <div class="input-group" qa="qty">
+                          <span class="input-group-addon">Qty</span> 
+                          <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                        </div>
+                        <div class="col-sm-5 col-xs-5 pad-0">
+                          <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                          </button></div><!-- ngIf: false --></div>
+                        <!-- <span>$490.00</span> -->
+                 </div>
+                 <div class="bottom_carousel_card">
+                  <!-- image -->
+                  <div>
+                         <img src="https://www.bigbasket.com/media/uploads/p/s/10000142_16-fresho-ladies-finger.jpg"
+                                alt="">
+                  </div>
+                  <!-- title -->
+                  <span>
+                         Permatex Ultra Black RTV Silicone Maximum Oil...</span>
+                  <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                  <select name="" id="">
+                    <option value="">2kg - Rs 120</option>
+                    <option value="">5kg - Rs 250</option>
+                    <option value="">10kg - Rs 700</option>
+                  </select>
+               <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+               <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+                <div class="col-sm-5 col-xs-4 pad-0">
+                  <div class="input-group" qa="qty">
+                    <span class="input-group-addon">Qty</span> 
+                    <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+                  </div>
+                  <div class="col-sm-5 col-xs-5 pad-0">
+                    <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+                    </button></div><!-- ngIf: false --></div>
+                  <!-- <span>$490.00</span> -->
+           </div>
+           <div class="bottom_carousel_card">
+            <!-- image -->
+            <div>
+                   <img src="https://www.bigbasket.com/media/uploads/p/s/40089742_2-fresho-beans-haricot.jpg"
+                          alt="">
+            </div>
+            <!-- title -->
+            <span>
+                   Permatex Ultra Black RTV Silicone Maximum Oil...</span>
+            <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+            <select name="" id="">
+              <option value="">2kg - Rs 120</option>
+              <option value="">5kg - Rs 250</option>
+              <option value="">10kg - Rs 700</option>
+            </select>
+         <p class="time">Standard Delivery: Today 8:00AM - 10:00AM</p>
+         <div class="col-xs-12 bskt-opt ng-scope" ng-if=" vm.selectedProduct.available" ng-hide="vm.selectedQuantity > 0 || vm.selectedProduct.zero_results_listing==true">
+          <div class="col-sm-5 col-xs-4 pad-0">
+            <div class="input-group" qa="qty">
+              <span class="input-group-addon">Qty</span> 
+              <input ng-model="vm.startQuantity" type="text" class="form-control ng-pristine ng-valid ng-not-empty ng-valid-maxlength ng-touched" maxlength="5" ></div>
+            </div>
+            <div class="col-sm-5 col-xs-5 pad-0">
+              <button qa="add" type="button" class="btn btn-add col-xs-9" ng-click="vm.addToBasket(vm.selectedProduct);">Add <span class="bskt-icon"></span>
+              </button></div><!-- ngIf: false --></div>
+            <!-- <span>$490.00</span> -->
+     </div>
+               </div>
+        </div>
+        <span class="bottom_carousel_next_button"> <span
+                      class=" material-symbols-outlined">arrow_forward_ios</span></span>
+ </div>
+      <!-- Bank Offers Starts Here -->
+      <div id="mySmartBasket">
+        <div id="myA">
+          <p>Bank Offers</p>
+        </div>
+        <!-- <div id="myB">
+          <button style="width: 120px">Show more</button>
+        </div> -->
+        <div id="myC">
+          <hr />
+        </div>
+      </div>
+      <div id="bankImages">
+        <div id="b1">
+          <img src="images/bank1.png" alt="bank1" />
+        </div>
+        <div id="b2">
+          <img src="images/bank2.png" alt="bank1" />
+        </div>
+        <div id="b3">
+          <img src="images/bank3.png" alt="bank1" />
+        </div>
+        <div id="b4">
+          <img src="images/bank4.jpg" alt="bank1" />
+        </div>
+      </div>
+      <!-- BANK OFFERS ENDS HERE -->
+      <!-- my smart basket starts 2 -->
+      <!-- This is connected with 1 -->
+      <!-- <div id="mySmartBasket">
+        <div id="myA">
+          <p>Best Sellers</p>
+        </div>
+        <div id="myB">
+          <button style="width: 120px">Show more</button>
+        </div>
+        <div id="myC">
+          <hr />
+        </div>
+      </div> -->
+      <!-- Dynamic Products -->
+      <!-- <div><h3>Some products will see here!</h3></div> -->
+      <!-- my smart basket ends -->
+      <!-- Top Offers Starts here 1 -->
+      <div id="bankHeader">
+        <div id="myD">
+          <p>Top Offers</p>
+        </div>
+        <div id="myE">
+          <hr />
+        </div>
+      </div>
+      <div id="topImages">
+        <div>
+          <a href="All_product.html">
+            <img src="images/top1.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/top2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/top2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/top2.jpg" alt="bank1" />
+          </a>
+        </div>
+      </div>
+      <!-- Fruits & Veggies -->
+      <div id="bankHeader">
+        <div id="myD">
+          <p>Fruits & Vegetables</p>
+        </div>
+        <div id="myE">
+          <hr />
+        </div>
+      </div>
+      <!-- Fruit Images with Same Ids 1 -->
+      <div id="fruitImages">
+        <div id="c1">
+          <a href="All_product.html">
+            <img src="images/fruit1.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c2">
+          <a href="All_product.html">
+            <img src="images/fruit2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c3">
+          <a href="All_product.html">
+            <img src="images/fruit3.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c4">
+          <a href="All_product.html">
+            <img src="images/fruit4.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c5">
+          <a href="All_product.html">
+            <img src="images/fruit5.jpg" alt="bank1" />
+          </a>
+        </div>
+      </div>
+      <!-- Fruit Images END -->
+      <!-- Daily Staple Starts -->
+      <div id="bankHeader">
+        <div id="myD">
+          <p>Your Daily Staples</p>
+        </div>
+        <div id="myE">
+          <hr />
+        </div>
+      </div>
+      <div id="dailyStaple">
+        <div>
+          <a href="All_product.html">
+            <img src="images/daily1.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/daily2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/daily3.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/daily4.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/daily5.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/daily6.jpg" alt="bank1" />
+          </a>
+        </div>
+      </div>
+      <!-- Daily Staple ENDs -->
+      <div id="bankHeader">
+        <div id="myD">
+          <p>Winter Beverages</p>
+        </div>
+        <div id="myE">
+          <hr />
+        </div>
+      </div>
+      <!-- Fruit Images 2 with same IDs -->
+      <div id="fruitImages">
+        <div id="c1">
+          <a href="All_product.html">
+            <img src="images/winter1.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c2">
+          <a href="All_product.html">
+            <img src="images/winter2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c3">
+          <a href="All_product.html">
+            <img src="images/winter3.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c4">
+          <a href="All_product.html">
+            <img src="images/winter4.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c5">
+          <a href="All_product.html">
+            <img src="images/winter5.jpg" alt="bank1" />
+          </a>
+        </div>
+      </div>
+      <!-- Top Offers Starts here 2-->
+      <div id="bankHeader">
+        <div id="myD">
+          <p>Snacks Store</p>
+        </div>
+        <div id="myE">
+          <hr />
+        </div>
+      </div>
+      <div id="topImages">
+        <div>
+          <a href="All_product.html">
+            <img src="images/snack1.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/snack2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/snack2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/snack2.jpg" alt="bank1" />
+          </a>
+        </div>
+      </div>
+      <!-- Top Offers Starts here 2-->
+      <div id="bankHeader">
+        <div id="myD">
+          <p>Cleaning & Household</p>
+        </div>
+        <div id="myE">
+          <hr />
+        </div>
+      </div>
+      <div id="topImages">
+        <div>
+          <a href="All_product.html">
+            <img src="images/clean1.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/clean2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <img src="images/clean3.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="All_product.html">
+            <a href="All_product.html"> </a>
+          </a>
+          <img src="images/clean4.jpg" alt="bank1" />
+        </div>
+      </div>
+      <div id="bankHeader">
+        <div id="myD">
+          <p>Beauty & Hygiene</p>
+        </div>
+        <div id="myE">
+          <hr />
+        </div>
+      </div>
+      <!-- Fruit Images 2 with same IDs -->
+      <div id="fruitImages">
+        <div id="c1">
+          <a href="All_product.html">
+            <img src="images/beauty1.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c2">
+          <a href="All_product.html">
+            <img src="images/beauty2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c3">
+          <a href="All_product.html">
+            <img src="images/beauty3.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c4">
+          <a href="All_product.html">
+            <img src="images/beauty4.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div id="c5">
+          <a href="All_product.html">
+            <img src="images/beauty5.jpg" alt="bank1" />
+          </a>
+        </div>
+      </div>
+      <!-- Daily Staple Starts 2 -->
+      <div id="bankHeader">
+        <div id="myD">
+          <p>Your Daily Staples</p>
+        </div>
+        <div id="myE">
+          <hr />
+        </div>
+      </div>
+      <div id="dailyStaple">
+        <div>
+          <a href="">
+            <img src="images/home1.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="images/home2.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="images/home3.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="images/home4.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="images/home5.jpg" alt="bank1" />
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="images/home6.jpg" alt="bank1" />
+          </a>
+        </div>
+      </div>
+      <!-- Daily Staple ENDs 2 -->
+      <!-- Banner 2 with same Id -->
+      <div id="banner1">
+        <a href="
+         <a href="">
+            
+           <img src="images/banner2.jpg" alt="" />
+          </a>
+        
+        </a>
+      </div>
+      <!-- Daily Staple Starts 3 -->
+      <div id="bankHeader">
+        <div id="myD">
+          <p>Brand Store</p>
+        </div>
+        <div id="myE">
+          <hr />
+        </div>
+      </div>
+      <div id="dailyStaple">
+        <div>
+           <a href="">
+            
+             <img src="images/brand1.jpg" alt="bank1" />
+          </a>
+         
+        </div>
+        <div>
+           <a href="">
+            
+             <img src="images/brand2.jpg" alt="bank1" />
+          </a>
+         
+        </div>
+        <div>
+           <a href="">
+            
+             <img src="images/brand3.jpg" alt="bank1" />
+          </a>
+         
+        </div>
+        <div>
+           <a href="">
+            
+             <img src="images/brand4.jpg" alt="bank1" />
+          </a>
+         
+        </div>
+        <div>
+           <a href="">
+            
+             <img src="images/brand5.jpg" alt="bank1" />
+          </a>
+         
+        </div>
+        <div>
+           <a href="">
+            
+             <img src="images/brand6.jpg" alt="bank1" />
+          </a>
+         
+        </div>
+      </div>
+      <!-- Daily Staple ENDs 2 -->
+      <!-- FOOTER Starts here -->
+      <h3 class="smart">
+        Featured Recipes
+      </h3>
+      <hr>
+      <!-- ---- box-- -->
+      <div id="box">
+        <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_bbw_c_400_web_wellness_banner_1_dec_w2_14012023.jpg" alt="">
+      </div>
+      <div id="footer">
+    
+
+        <div id="footer">
+       
+          <div id="footer1">
+          <h3>bigBasket</h3>
+          <p>About Us</p>
+          <p>In News</p>
+          <p>Green bigBasket</p>
+          <p>Privacy Policy</p>
+          <p>Affiliate</p>
+          <p>Terms and Conditions</p>
+          <p>Careers At bigBasket</p>
+          <p>bb Instant</p>
+          <p>bb Daily</p>
+          <p>bb Blog</p>
+        </div>
+        <div id="footer2">
+          <h3>Help</h3>
+          <p>FAQs</p>
+          <p>Contact Us</p>
+          <p>bb Wallet FAQs</p>
+          <p>bb Wallet T&amp;Cs</p>
+          <p>Affiliate</p>
+          <p>Vendor Connect</p>
+          <p>E-Invoice Compliance for bigBasket Vendors</p>
+        </div>
+        <div id="footer3">
+          <h3 style="margin-bottom: 30px">Download App</h3>
+          <img src="https://www.bbassets.com/static/v2476/uiv2/images/Google-App-store-icon.png" alt="googleBigBasket" style="width: 60%; object-fit: contain">
+          <br>
+          <br>
+          <img src="https://www.bbassets.com/static/v2476/uiv2/images/Apple-App-store-icon.png" alt="AppleBigBasket" style="width: 60%; object-fit: contain">
+        </div>
+        <div id="footer4">
+          <h3>Get Social With Us</h3>
+          <div>
+            <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" alt="fb-link" style="width: 45px">
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png" alt="Pinterest" style="width: 45px">
+            <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="twitterIcon" style="width: 45px">
+            <img src="https://www.freepnglogos.com/uploads/instagram-icon-png/instagram-icon-suzem-limited-make-known-20.png" alt="InstaIcon" style="width: 45px">
+          </div>
+        </div>
+          
+          </div>
+      </div>
+      <!-- FOOTER Ends here -->
+    </div>
+  </body>
+</html>
+
+<script type="module">
+  import {navbar,footer} from "./components/index.js"
+
+  // console.log(footer)
+  let nav_div = document.getElementById("navbar")
+  nav_div.innerHTML = navbar();
+
+  let footer_div = document.getElementById("footer")
+  footer_div.innerHTML = footer();
+
+  var product = JSON.parse(localStorage.getItem("proData")) || [];
+  var cart = JSON.parse(localStorage.getItem("cartValue")) || [];
+
+   document.querySelector('#cartLen').innerHTML=cart.length;
+
+
+  document.querySelector(".card").addEventListener("click", function () {
+    console.log("cart");
+    window.location.href = "cart.html";
+  });
+  var cartLen = document.querySelector("#cartLen");
+  cartLen.textContent = cart.length;
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+      myIndex = 1;
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+  }
+
+  // function openNav() {
+  //   document.getElementById("mySidepanel").style.width = "250px";
+  // }
+  // document.getElementById("burger").addEventListener("click", function(){
+  //   document.querySelector(".material-icons").style.width = "250px";
+  // })
+
+  
+// function search(){
+//     let q =document.querySelector("input").value
+//     console.log(q)
+//     let newData = bag.filter(function(elem){
+//         return elem.title.toLowerCase().includes(q.toLowerCase())
+//     });
+//     // console.log(newData);
+//     // display(Fruits_and_Vegitables)
+//     // displayTable(newData)
+// }
+
+  /* Set the width of the sidebar to 0 (hide it) */
+  // function closeNav() {
+  //   document.getElementById("close").style.width = "0";
+  // }
+
+  function openPerson() {
+    document.getElementById("personDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (e) {
+    if (!e.target.matches(".personbtn")) {
+      var myDropdown = document.getElementById("personDropdown");
+      if (myDropdown.classList.contains("show")) {
+        myDropdown.classList.remove("show");
+      }
+    }
+  };
+
+  function cart1() {
+    window.location.href = 'cart.html';
+  }
+
+ 
+  
+</script>
+<script>
+
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+
+
+
+/////slider.js
+let leftBtn = document.querySelector('.bottom_carousel_prev_button');
+let rightBtn = document.querySelector('.bottom_carousel_next_button');
+let track = document.querySelector('.bottom_carousel_cards_track')
+let card = document.querySelector('.bottom_carousel_card')
+let cardWidth = card.getBoundingClientRect().width;
+let slideIndexNext = 1;
+let slideIndexPrev = 1;
+function moveForward() {
+
+       let moveVal = cardWidth * slideIndexNext;
+       if (slideIndexNext >= 4) {
+              moveVal = 0;
+              slideIndexNext = 1;
+       }
+       track.style.transform = `translateX(-${moveVal}px)`
+       slideIndexNext++;
+}
+
+rightBtn.addEventListener('click', (e) => {
+       moveForward()
+})
+
+function moveBackward() {
+       let moveVal = cardWidth * slideIndexPrev;
+       if (slideIndexNext <= slideIndexPrev) {
+              moveVal = 0;
+       }
+       track.style.transform = `translateX(${moveVal}px)`
+       slideIndexPrev++;
+}
+
+leftBtn.addEventListener('click', (e) => {
+       moveBackward()
+})
+
+document.getElementById
+</script>
+

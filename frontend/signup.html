@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Lato Fonts impoting -->
+    <!-- Roboto Slab Importing -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      #container {
+        margin: auto;
+        width: 50%;
+        height: 800px;
+        margin: auto;
+        font-family: sans-serif;
+      }
+      #inner {
+        width: 300px;
+        height: 500px;
+        margin: auto;
+        text-align: center;
+        font-family: Roboto, sans-serif;
+        /* border: 1px solid black; */
+        border-radius: 20px;
+        padding-top: 20px;
+
+        margin-top: 100px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      #head {
+        margin-top: 0px;
+        /* border: 1px solid black; */
+        /* margin-top: 10px; */
+      }
+      h3 {
+        margin-top: 30px;
+        color: #84c225;
+        /* border: 1px solid black; */
+        display: block;
+        /* margin-top: 50px; */
+      }
+      #logo {
+        width: 20%;
+        height: 15%;
+        /* border: 1px solid black; */
+        /* margin-top: 100px; */
+        margin: auto;
+      }
+      img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+      #mobile {
+        width: 80%;
+        height: 25px;
+        margin-top: 30px;
+        border: none;
+        border-bottom: 1px solid gray;
+        color: #333333;
+        outline: none;
+        font-style: italic;
+      }
+      #email {
+        width: 80%;
+        height: 25px;
+        /* margin-top: 60px; */
+        border: none;
+        border-bottom: 1px solid gray;
+        color: #333333;
+        outline: none;
+        font-style: italic;
+      }
+      #password {
+        width: 80%;
+        height: 25px;
+        margin-top: 30px;
+        border: none;
+        border-bottom: 1px solid gray;
+        color: #333333;
+        outline: none;
+        font-style: italic;
+      }
+      /* #one{
+           margin-top: 100px;
+           text-align:center;
+           width:60%;
+           height:40px;
+           border-radius: 5px;
+           background-color: whitesmoke;
+           border:1px solid black;
+           font-weight: lighter;
+
+
+       } */
+      #two {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 80%;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #84c225;
+        color: white;
+        border: none;
+        font-weight: light-bold;
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 8px;
+        position: relative;
+        font-weight: lighter;
+        color: #333333;
+        font-family: sans-serif;
+        line-height: 15px;
+      }
+      a {
+        color: royalblue;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      span {
+        font-size: 12px;
+        margin-top: 50px;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="container"> -->
+    <div id="inner">
+      <div id="logo">
+        <img src="images/bbLogo.png" alt="" />
+      </div>
+      <div id="head">
+        <h3>SIGN UP</h3>
+      </div>
+      <form action="" id="form">
+        <!-- <label for="">Email</label> -->
+    
+        <input id="email" type="email" placeholder="Enter Email" /><br />
+
+        <!-- <label for="">Mobile No</label> -->
+        <input
+          id="mobile"
+          type="text"
+          maxlength="10"
+          placeholder="Enter Mobile Number"
+        /><br />
+
+        <!-- <label for="">Password</label>  -->
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter Password"
+        /><br />
+
+        <button id="two" type="submit">Signup</button>
+      </form>
+      <span>If already have account? <a href="login.html">Login Here</a></span>
+      <p>
+        By continuing, I accept TCP-bigbasket's
+        <a href="">Terms and Conditions</a><br />
+        and
+        <a href="">Privacy Policy.</a>
+      </p>
+    </div>
+    <!-- </div> -->
+  </body>
+</html>
+<script>
+
+  
+  const form_btn = document.querySelector("#form");
+  form_btn.addEventListener("submit", formFunction);
+
+  // Make API request to server for forming the new user.
+  async function formFunction(event) {
+    try {
+      event.preventDefault();
+      let all_input_tags = document.querySelectorAll("#form input");
+ 
+      let email = document.querySelector("#email").value;
+      let password = document.querySelector("#password").value;
+      let mobile = document.querySelector("#mobile").value;
+      
+      let userObj = {
+ 
+        email,
+        password,
+     mobile
+     
+      };
+
+      let form_request = await fetch(
+        "http://localhost:3500/user/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userObj),
+        }
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          alert(res);
+          window.location.href = "./login.html";
+        })
+        .catch((err) => console.log(err));
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
+    }
+  }
+</script>
