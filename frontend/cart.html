@@ -125,6 +125,34 @@
             border: 1px solid #f3f3f3;
           "
         />
+        <hr
+        style="
+            height: 20px;
+            background-color: #f3f3f3;
+            border: 1px solid #f3f3f3;
+          ">
+        <div id="add">
+       <form id="form">
+        <label for="">Name</label><br>
+        <input type="name" name="" id="name" placeholder="Name"><br>
+        <label for="">Email</label><br>
+        <input type="email" placeholder="Email" id="email"><br>
+        <label for="">Mobile</label><br>
+        <input type="number" placeholder="Enter mobile number" id="mobile"><br>
+        <label for="">City</label><br>
+        <input type="text" placeholder="Enter city" id="city"><br>
+        <label for="">Pincode</label><br>
+        <input type="number" placeholder="Pincode" id="pincode"><br>
+        <label for="">State</label><br>
+        <input type="text" placeholder="Enter state" id="state"><br>
+        <input type="submit" value="submit" id="btn">
+
+       </form>
+      <div id="address">
+        <h2>Address of Users!</h2>
+        <div id="data"></div>
+      </div>
+      </div>
         <!-- FOOTER Starts here -->
         <div id="footer">
       <div id="footer1">
@@ -307,6 +335,52 @@ import {navbar,footer} from "./components/index.js"
       }
     }
   };
+  let arr =[]
+  let form =  document.querySelector("#form")
+  form.addEventListener("submit",formData)
+
+  async function formData(event){
+    event.preventDefault()
+      let name = document.getElementById("name").value
+  let email = document.getElementById("email").value
+  let mobile= document.getElementById("mobile").value
+  let city = document.getElementById("city").value
+  let pincode = document.getElementById("pincode").value
+  let state = document.getElementById("state").value
+  let obj ={
+    name,email,mobile,city,pincode,state,
+  }
+arr.push(obj)
+
+  localStorage.setItem("formdata",JSON.stringify(arr))
+  location.reload();
+
+  }
+
+  //======================================================================>
+  let formdata = JSON.parse(localStorage.getItem("formdata"));
+display(formdata);
+
+function display(formdata) {
+  formdata.forEach(ele => {
+    let div = document.createElement("div");
+    let name = document.createElement("p");
+    name.innerText = "Name: " + ele.name;
+    let email = document.createElement("p");
+    email.innerText = "Email: " + ele.email;
+    let mobile = document.createElement("p");
+    mobile.innerText = "Mob: " + ele.mobile;
+    let city = document.createElement("p");
+    city.innerText = "City: " + ele.city;
+    let pincode = document.createElement("p");
+    pincode.innerText = "Pincode: " + ele.pincode;
+    let state = document.createElement("p");
+    state.innerText = "State: " + ele.state;
+    div.append(name, email, mobile, city, pincode, state);
+    document.querySelector("#address").append(div);
+  });
+}
+
 </script>
 <!-- <script type="module"> 
   import {navbar,footer} from "./components/index.js"

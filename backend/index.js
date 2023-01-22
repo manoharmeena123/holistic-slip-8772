@@ -18,7 +18,7 @@ app.use(cors({
 app.get("/",(req,res)=>{
     res.json("WELCOME")
 })
-   
+     
 app.use("/user",userRouter)
 app.use(authenticate)
  app.use("/post", postRouter)
@@ -42,3 +42,4 @@ app.listen(process.env.port,async()=>{
 
 })
 
+  

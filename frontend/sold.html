@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #sold{
+        display: grid;
+        grid-template-columns: repeat(4 1fr);
+        grid-template-rows: 300px ;
+        justify-content:center ;
+        margin: auto;
+        padding: 40px;
+        /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+      }
+      #sold>div{
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+      #sold{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+        #sold>div> img{
+            width: 80%;
+        }
+        #sold>div{
+            padding: 10px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 30px 4px;
+        }
+      
+        @media all and (min-width:500px) and (max-width:900px){
+            #sold{
+                grid-template-columns:repeat(2,1fr);
+            }
+        }
+        @media all and (min-width:100px) and (max-width:500px){
+            #sold{
+                grid-template-columns:repeat(1,1fr);
+            }
+        }
+        h2{
+          background-color: darkorange;
+          color: black;
+          text-align: center;
+          font-size: larger;
+
+        }
+        *{
+          margin: 0;
+          padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Recent Sold Products</h2>
+    <div id="sold">
+
+    </div>
+</body>
+</html>
+<script>
+    
+let data = JSON.parse(localStorage.getItem("cartValue"))
+console.log(data)
+displayData(data)
+
+function displayData(data){
+    document.querySelector("div").innerHTML =""
+  data.forEach(ele=>{
+    let div = document.createElement("div")
+    let img = document.createElement("img")
+    img.setAttribute("src",ele.image)
+    let name = document.createElement("h3")
+    name.innerText = "Name:"+ele.name
+    let price = document.createElement("h3")
+    price.innerText ="Price:"+ ele.Price
+    let qty = document.createElement("h3")
+    qty.innerText ="Qty:"+ ele.qty
+    let Offer = document.createElement("h3")
+   Offer.innerText ="Offer:"+ ele.Offer
+
+   div.append(img,name,price,qty,Offer)
+   document.querySelector("#sold").append(div)
+  })
+} 
+</script>

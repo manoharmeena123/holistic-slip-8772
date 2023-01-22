@@ -358,8 +358,8 @@ function sidebar(){
       </div>
       <div id="products"></div>
     </div>
-  </div>
-  
+  </div>  
+   
   `
 }
 

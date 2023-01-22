@@ -180,7 +180,9 @@ async function formFunction(event){
     let obj  = {
       email,password
     }
-  
+  if(email=="admin@gmail.com" && password=="admin"){
+     window.location.href="./adminside.html"
+  }else{
         console.log(obj);
         let form_request = await fetch("http://localhost:3500/user/login",{
             method : "POST",
@@ -197,10 +199,12 @@ async function formFunction(event){
             window.location.href= "./index.html"
         })
         .catch((err) => console.log(err))
-        
+      }
     } catch (error) {
 		console.log(error);
         alert("wrong username or password. Please try again later.");
     }
 }
+
+
 </script>
