@@ -255,7 +255,7 @@ import {navbar,footer} from "./components/index.js"
       cart = []
       showCart(cart)
       localStorage.setItem("cartValue", JSON.stringify(cart))  /////===================================================================>
-    // window.onload()
+    window.location.reload()
     });
     document.querySelector("#checkoutBtn").addEventListener("click", function () {
       // console.log("here")
