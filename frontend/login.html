@@ -184,7 +184,7 @@ async function formFunction(event){
      window.location.href="./adminside.html"
   }else{
         console.log(obj);
-        let form_request = await fetch("http://localhost:3500/user/login",{
+        let form_request = await fetch("https://real-puce-stingray-wear.cyclic.app/user/login",{
             method : "POST",
             body : JSON.stringify(obj),
             headers : {
