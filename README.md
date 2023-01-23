@@ -17,3 +17,6 @@ Features:
 
 
 Tech Stack: HTML | CSS | Javascript | Node.js| Express | MonogoDB |Bootstrap
+
+Frontend Link : https://playful-klepon-ca640c.netlify.app
+Backend Link  : https://real-puce-stingray-wear.cyclic.app/
