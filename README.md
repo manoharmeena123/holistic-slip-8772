@@ -3,7 +3,7 @@
 - `BigBasket - Clone`
 - `Project Name - BigBucket`
 - `This was indivisualy project built in 4 day of span`
-An e-commerce website to shop for items like grocery, bakery, Fruits, Vegetables. 
+- `An e-commerce website to shop for items like grocery, bakery, Fruits, Vegetables.` 
 -----
 `Features`: 
 1. `Sign-in/Sign-up`
